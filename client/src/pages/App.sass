@@ -16,7 +16,50 @@
         transform: translate(-50%, -50%)
         svg
             width: 120px
-            
+.hidden
+    opacity: 0
+    z-index: -1
+    position: relative
+    display: block
+
+.modal
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 700px
+    border-radius: 20px
+    height: 300px
+    background-color: #010001
+    transform: translate(-50%, -50%)
+    .modal__results
+        margin-top: 60px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        .modal__status
+            color: #504F50
+            font-size: 48px
+        .ic
+            svg
+                display: block
+                width: 120px
+                path
+                    fill: #504F50
+    .modal__playagain
+        cursor: pointer
+        border: 1px solid red
+        border-radius: 20px
+        width: 400px
+        height: 150px
+        margin: 0 auto
+        margin-top: 30px
+        background-color: #F85BFF
+        .modal__playagain-content
+            font-size: 48px
+            text-align: center
+            line-height: 150px
+            color: #fff
+
 .app__papercircle
     background-color: #80B947
     
@@ -26,50 +69,55 @@
 body
     box-sizing: border-box
     background-color: #3F7FEC
+    padding: 0
+    margin: 0
     .app
         width: 65%
+        position: relative
         margin: 1vh auto 0 auto
-        .app__infobar
-            display: flex
-            align-items: center
-            justify-content: space-around
-            color: #fff
-            font-size: 30px
-            .app__statswrap
+        z-index: 10
+        .app__black-transparent-bgc
+            .app__infobar
                 display: flex
-                .app__stats
+                align-items: center
+                justify-content: space-around
+                color: #fff
+                font-size: 30px
+                .app__statswrap
                     display: flex
-                    align-items: center
-                    span
-                        font-size: 60px
-                        margin-right: 10px
-                .losses
-                    margin-left: 50px
-                    span
-                        color: #DB4661
-                .wins
-                    span
-                        color: #55BF6B
-        
-        .app__game
-            display: flex
-            justify-content: space-around
-            margin-top: 50px
-            text-align: center
-            .app__you-section
-                .app__you-title
-                    color: #fff
-            .app__computer-section
-                .app__computer-title
-                    color: #fff
-                .app__computercircle
-                    background-color: #2E2D2E
-                    position: relative
-                    margin-top: 260px
-                    .app__computercircle-inner
-                        color: #B4B2B4
-                        position: absolute
-                        font-size: 130px
-                        top: 45%
-                        left: 50%
-                        transform: translate(-50%, -50%)
+                    .app__stats
+                        display: flex
+                        align-items: center
+                        span
+                            font-size: 60px
+                            margin-right: 10px
+                    .losses
+                        margin-left: 50px
+                        span
+                            color: #DB4661
+                    .wins
+                        span
+                            color: #55BF6B
+            
+            .app__game
+                display: flex
+                justify-content: space-around
+                margin-top: 50px
+                text-align: center
+                .app__you-section
+                    .app__you-title
+                        color: #fff
+                .app__computer-section
+                    .app__computer-title
+                        color: #fff
+                    .app__computercircle
+                        background-color: #2E2D2E
+                        position: relative
+                        margin-top: 260px
+                        .app__computercircle-inner
+                            color: #B4B2B4
+                            position: absolute
+                            font-size: 130px
+                            top: 45%
+                            left: 50%
+                            transform: translate(-50%, -50%)
